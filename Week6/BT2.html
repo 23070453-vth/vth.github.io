@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CSS3 Lab – Odd/Even + Product List</title>
+  <title>CSS3 Lab – Odd/Even + Product List + Menu</title>
   <style type="text/css">
 
     /* ---------- PHẦN 1: RECOGNIZE ODD AND EVEN ELEMENT ---------- */
@@ -25,9 +25,6 @@
     }
 
     /* ---------- PHẦN 2: CREATE PRODUCT LIST WITH CSS3 ---------- */
-    .ProductDetails {
-      display: none;
-    }
 
     .Product img {
       width: 150px;
@@ -44,14 +41,17 @@
     .ProductName {
       font-weight: bold;
       display: block;
+      margin-top: 8px;
+      color: #333;
     }
 
     .ProductPrice {
       font-style: italic;
+      color: #666;
     }
 
     .ProductPrice::before {
-      content: " - $";
+      content: "$";
     }
 
     .Product {
@@ -62,8 +62,62 @@
       cursor: pointer;
     }
 
-    .Product:hover .ProductDetails {
-      display: block;
+    /* ---------- PHẦN 3: MENU ---------- */
+    .menu {
+      width: 250px;
+      font-family: 'Segoe UI', sans-serif;
+      margin-top: 350px; /* để tránh đè lên hình */
+      clear: both;
+    }
+
+    /* Tiêu đề menu có hiệu ứng gradient */
+    .menu-title {
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px 8px 0 0;
+      margin: 0;
+    }
+
+    /* Danh sách menu */
+    .menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      border: 1px solid #ddd;
+      border-radius: 0 0 8px 8px;
+      overflow: hidden;
+    }
+
+    /* Từng mục menu */
+    .menu li {
+      padding: 10px 15px;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      transition: background 0.3s;
+    }
+
+    /* Thêm dấu chấm nhỏ trước mỗi mục */
+    .menu li::before {
+      content: "•";
+      color: #ff7e5f;
+      position: absolute;
+      left: 8px;
+      font-size: 18px;
+      top: 6px;
+    }
+
+    /* Khi rê chuột thì đổi nền */
+    .menu li:hover {
+      background: yellow;
+      cursor: pointer;
+    }
+
+    /* Bo tròn góc dưới cùng */
+    .menu li:last-child {
+      border-bottom: none;
+      border-radius: 0 0 8px 8px;
     }
 
     body {
@@ -73,12 +127,14 @@
 
     h2 {
       color: #333;
+      clear: both;
     }
 
   </style>
 </head>
 
 <body>
+  <!-- PHẦN 1 -->
   <h2>1️⃣ Recognize Odd and Even Element</h2>
   <div class="subject-list">
     <div>Aptech Semester 1's Subject</div>
@@ -90,6 +146,7 @@
     <div>eProject (Dreamweaver).</div>
   </div>
 
+  <!-- PHẦN 2 -->
   <h2>2️⃣ Create Product List with CSS3</h2>
 
   <div class="Product">
@@ -115,5 +172,18 @@
       <span class="ProductPrice">1.0</span>
     </div>
   </div>
+
+  <!-- PHẦN 3 -->
+  <div class="menu">
+    <h3 class="menu-title">Main Menu</h3>
+    <ul>
+      <li>Home</li>
+      <li>About Us</li>
+      <li>Products</li>
+      <li>Services</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+
 </body>
 </html>

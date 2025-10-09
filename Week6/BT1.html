@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LAB SESSION 7 & 8 – CSS Selectors</title>
+
+  <style type="text/css">
+    /* =======================
+       PHẦN 1: THE PRIORITY OF SELECTORS
+       ======================= */
+    MyCustomizeTag {
+      display: block;
+      text-align: center;
+      text-transform: capitalize;
+      text-decoration: underline;
+      font: 20px "Comic Sans MS";
+      margin-bottom: 20px;
+    }
+
+    div {
+      background-color: yellow;
+      margin: 0px 0px 5px 5px;
+      width: 300px;
+      padding: 3px;
+    }
+
+    .GroupFormat {
+      font-weight: bold;
+      color: #f00; /* chữ đỏ */
+      width: 300px;
+    }
+
+    #TheHighestPriority {
+      background-color: #000; /* nền đen */
+      color: white;           /* chữ trắng */
+      font: italic 30px "Times New Roman";
+    }
+
+    /* =======================
+       PHẦN 2: RECOGNIZE ODD AND EVEN ELEMENT
+       ======================= */
+    .colorSection {
+      margin-top: 40px;
+    }
+
+    .colorSection div {
+      width: 350px;
+      padding: 5px;
+      margin: 3px;
+      font-size: 20px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    .colorSection div:nth-child(odd) {
+      background-color: #f4ff81; /* vàng nhạt */
+      color: #000;
+    }
+
+    .colorSection div:nth-child(even) {
+      background-color: #80deea; /* xanh nhạt */
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================
+       PHẦN 1: The Priority of Selectors
+       ======================= -->
+  <MyCustomizeTag>Here Is Customize Tag</MyCustomizeTag>
+
+  <div>The first paragraph.</div>
+  <div class="GroupFormat">The second paragraph.</div>
+  <div class="GroupFormat" id="TheHighestPriority">The third paragraph.</div>
+  <div>The fourth paragraph.</div>
+  <div class="GroupFormat">The fifth paragraph.</div>
+  <div class="GroupFormat">The sixth paragraph.</div>
+  <div>The seventh paragraph.</div>
+
+  <!-- =======================
+       PHẦN 2: Recognize Odd and Even Elements
+       ======================= -->
+  <div class="colorSection">
+    <h2 style="text-align:center;">Recognize Odd and Even Elements</h2>
+
+    <div>Paragraph 1</div>
+    <div>Paragraph 2</div>
+    <div>Paragraph 3</div>
+    <div>Paragraph 4</div>
+    <div>Paragraph 5</div>
+    <div>Paragraph 6</div>
+    <div>Paragraph 7</div>
+    <div>Paragraph 8</div>
+  </div>
+
+</body>
+</html>

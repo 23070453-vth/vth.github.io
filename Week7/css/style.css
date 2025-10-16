@@ -1,0 +1,74 @@
+/* Nền trên cùng */
+#header {
+  background: url("../images/header.jpg") no-repeat center;
+  background-size: cover;
+  height: 181px;
+  width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Logo */
+#logo {
+  padding: 20px 0 0 50px;
+}
+
+/* Thanh menu chính */
+#menu_top {
+  margin-top: 55px;
+  margin-left: 30px;
+  background: #ffffff;
+  height: 40px;
+  opacity: 0.8;
+  border-radius: 10px 0px 0px 10px;
+}
+
+/* Danh sách menu chính */
+#menu_top ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#menu_top ul li {
+  display: inline-block;
+  position: relative;
+  padding: 10px 15px;
+}
+
+#menu_top ul li a {
+  text-decoration: none;
+  color: #b30000;
+  font-weight: bold;
+}
+
+/* Hiệu ứng hover */
+#menu_top ul li:hover {
+  background-color: #ffff99;
+  border-radius: 5px;
+}
+
+/* Menu con (dropdown) */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 150px;
+}
+
+.submenu li {
+  display: block;
+  padding: 8px;
+  text-align: left;
+}
+
+.submenu li a {
+  color: #000;
+}
+
+#menu_top ul li:hover .submenu {
+  display: block;
+}
